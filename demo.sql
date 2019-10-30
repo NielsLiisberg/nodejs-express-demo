@@ -1,5 +1,4 @@
--- IBM i -Python flask demo
--- This microservice example are using Db2 and Flask, and gives the simple setup  
+-- IBM i - node.js  / Db2 demo
 
 -- I always you bash as my default shell. 
 -- It requires you have installed bash with: 
