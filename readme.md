@@ -63,7 +63,6 @@ Now you can try the Db2 microservice
 ```
 node demo.js
 ```
-http://myibmi:8899
-```
+http://myibmi:8899/list_users_by_view
 
 ... It's that easy
