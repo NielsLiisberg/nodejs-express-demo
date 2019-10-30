@@ -1,3 +1,4 @@
+// Nice little wrapper for Db2 - Thanx Liam :)
 const {
   DBPool, Statement, NUMERIC, CHAR, IN
 } = require('idb-pconnector');
