@@ -27,9 +27,9 @@ ssh myibmi
 yum install git
 ```
 
-This demo also requires Python3 and the Flask framework
+This demo also requires nodejs12
 ```
-yum install node12
+yum install nodejs12
 ```
 You are about to test if the environment works with the folloing application. Just read it as see how easy it is:  
 
@@ -42,12 +42,11 @@ mkdir /prj
 cd  /prj
 git -c http.sslVerify=false clone git://github.com/NielsLiisberg/nodejs-express-demo.git
 ```
-
-You start the application 
+Now it time to install the projects dependencies:
 
 ```
 cd /prj/nodejs-express-demo
-node demo.js
+npm install
 ```
 
 We are ready for next step: Install  the database:
