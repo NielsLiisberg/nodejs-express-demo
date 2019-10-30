@@ -1,4 +1,4 @@
-# IBM i microservice demo using node.js, Expressand Db2
+# IBM i microservice demo using node.js, Express and Db2
 This microservice example are using Db2, and gives the simple starting point for building microservices fast and easy:
 
 # Setup the environment
@@ -40,22 +40,17 @@ This application is in the git repo - so let's clone it:
 ```
 mkdir /prj
 cd  /prj
-git -c http.sslVerify=false clone https://github.com/NielsLiisberg/Python-flask-demo.git
+git -c http.sslVerify=false clone git://github.com/NielsLiisberg/nodejs-express-demo.git
 ```
 
 You start the application 
 
 ```
-cd /prj/Python-flask-demo
-python3 flasktest.py
+cd /prj/nodejs-express-demo
+node demo.js
 ```
-Now open you browser:
-```
-http://myibmi:5000
-```
-If the web page says "hello world" - then you are golden: Python3 and Flask works 
-Stop the application from the ssh by CTRL-C
-and we are ready for next step: Install  the database:
+
+We are ready for next step: Install  the database:
 
 ```
 Open ACS
@@ -63,7 +58,7 @@ Click Run SQL script
 Click file
 Click open 
 open IFS Stream
-Enter the name: /prj/Python-flask-demo/demo.sql
+Enter the name: /prj/nodejs-express-demo/demo.sql
 ```
 
 (or you can copy/paste  **demo.sql** file into you ACS Run SQL script editor)
@@ -72,17 +67,9 @@ Run each step in the script one-by-one. When the database is ready, jump back to
 
 Now you can try the Db2 microservice 
 ```
-python3 flaskdb2.py
+node demo.js
 ```
-(If  you get a "ibm_db module not found" you need to install):
-```
-yum install python3-ibm_db
-```
-
-You have two end points:
-```
-http://myibmi:5000/list_users_by_proc
-http://myibmi:5000/list_users_by_view
+http://myibmi:8899
 ```
 
 ... It's that easy
