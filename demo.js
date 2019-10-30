@@ -6,7 +6,8 @@ const db2 = require('./db2');
 
 db2.connect();
 
-app.get('/', async (req, res) => {
+// Test like http://dksrv131:8899/list_users_by_view
+app.get('/list_users_by_view', async (req, res) => {
   const resultSet = await db2.executeStatement(
     'select * from microdemo.users_full'
   );
