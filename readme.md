@@ -31,18 +31,13 @@ This demo also requires nodejs12
 ```
 yum install nodejs12
 ```
-You are about to test if the environment works with the folloing application. Just read it as see how easy it is:  
-
-```
-
-```
 This application is in the git repo - so let's clone it:
 ```
 mkdir /prj
 cd  /prj
 git -c http.sslVerify=false clone git://github.com/NielsLiisberg/nodejs-express-demo.git
 ```
-Now it time to install the projects dependencies:
+Now it time to install the projects dependencies in the project folder:
 
 ```
 cd /prj/nodejs-express-demo
