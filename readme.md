@@ -1,5 +1,5 @@
-# IBM i microservice demo using Python, Flask and Db2
-This microservice example are using Db2 and Flask, and gives the simple starting point for building microservices fast and easy:
+# IBM i microservice demo using node.js, Expressand Db2
+This microservice example are using Db2, and gives the simple starting point for building microservices fast and easy:
 
 # Setup the environment
 
@@ -29,35 +29,11 @@ yum install git
 
 This demo also requires Python3 and the Flask framework
 ```
-yum install python3-pip
-pip3 install --upgrade pip
-pip3 install Flask
+yum install node12
 ```
-You are about to test if the Python / Flask environment works with the folloing application. Just read it as see how easy it is:  
+You are about to test if the environment works with the folloing application. Just read it as see how easy it is:  
 
 ```
-# Importing flask module in the project is mandatory 
-# An object of Flask class is our WSGI application. 
-from flask import Flask 
-
-# Flask constructor takes the name of 
-# current module (__name__) as argument. 
-app = Flask(__name__) 
-
-# The route() function of the Flask class is a decorator, 
-# which tells the application which URL should call 
-# the associated function. 
-@app.route('/') 
-# ‘/’ URL is bound with hello_world() function. 
-def hello_world(): 
-  return 'Hello World'
-
-# main driver function 
-if __name__ == '__main__': 
-
-  # run() method of Flask class runs the application 
-  # on the local development server. 
-  app.run(host='0.0.0.0')
 
 ```
 This application is in the git repo - so let's clone it:
