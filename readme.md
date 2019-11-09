@@ -5,7 +5,7 @@ This microservice example are using Db2, and gives the simple starting point for
 
 I always use bash as my default shell. You can set that once and for all from ACS Run SQL script with: 
 ```
-CALL QSYS2.SET_PASE_SHELL_INFO('\*CURRENT', '/QOpenSys/pkgs/bin/bash');   
+CALL QSYS2.SET_PASE_SHELL_INFO('*CURRENT', '/QOpenSys/pkgs/bin/bash');   
 ```
 
 On IBM i you will need the open source in you path (and a nice prompt). So if you don't have a .profile yet, then:
