@@ -37,7 +37,7 @@ module.exports = {
         }
       }
 
-      await statement.bindParam(bindings);
+      await statement.bindParameters(bindings);
       await statement.execute();
       results = await statement.fetchAll();
     }

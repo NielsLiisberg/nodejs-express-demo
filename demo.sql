@@ -1,16 +1,15 @@
 -- IBM i - node.js  / Db2 demo
 
--- I always you bash as my default shell. 
+-- I always use bash as my default shell. 
 -- It requires you have installed bash with: 
 --     yum install bash 
 -- Now You can set that once and for all from ACS Run SQL script with: 
-CALL QSYS2.SET_PASE_SHELL_INFO('*CURRENT', '/QOpenSys/pkgs/bin/bash');   
+call qsys2.set_pase_shell_info('*CURRENT', '/QOpenSys/pkgs/bin/bash');   
 
 
 -- Setup database:
 create schema microdemo;
 set schema microdemo;
-drop table microdemo.users;
 
 -- A table of user to a new website:
 create or replace table microdemo.users (
@@ -38,11 +37,11 @@ insert into  microdemo.users (
     email
 ) 
 select 
-    lower(trim(authorization_name))  concat '1234' , 
+    lower('secret_4_' concat trim(authorization_name)) , 
     authorization_name,
     previous_signon,
     text_description, 
-    lower(trim(authorization_name)) concat '@sitemule.com'
+    lower(trim(authorization_name)) concat '@my-company.com'
 from qsys2.user_info 
 where authorization_name not like 'Q%' 
 and text_description > ' '
